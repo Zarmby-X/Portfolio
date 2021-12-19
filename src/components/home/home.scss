@@ -1,0 +1,14 @@
+$mainColor: #DA0037;
+$secondaryColor: #ffffff;
+$bgColor: #171717;
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#homePage{
+    background-color: $secondaryColor;
+    height: 100vh;
+    width: 100%;
+}

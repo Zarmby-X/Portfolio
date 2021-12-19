@@ -1,10 +1,10 @@
 import Navbar from "../appConsts/navBar/Navbar";
 
-import "./home.css"
+import "./home.scss"
 
 function Home(){
  return(
-     <div>
+     <div id="homePage">
         <Navbar></Navbar>
      </div>
  );

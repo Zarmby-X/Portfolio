@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mansalva&display=swap');
+
+$mainColor: #EF0D33;
+$secondaryColor: #ffffff;
+$bgColor: #111517;
+
+*{
+    font-size: 16px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    position: relative;
+    background-color: $bgColor;
+    transition: all 500ms;
+}
+
+#logoContainer{
+    left: 20px;
+    top: 15px;
+    position: absolute;
+    cursor: pointer;
+}
+
+#logo{
+    color: $mainColor;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    transition: all 200ms;
+    position: absolute;
+    user-select: none;
+}
+
+#logoHover{
+    color: $secondaryColor;
+    font-family: "Bebas Neue", cursive;
+    letter-spacing: 2px;
+    font-size: 2.5rem;
+    transition: all 200ms;
+    position: absolute;
+    transform: translateY(20%);
+    opacity: 0;
+    user-select: none;
+}
+
+#logoContainer:hover #logo{
+    opacity: 0;
+    transform: translateY(-30%);
+}
+
+#logoContainer:hover #logoHover{
+    opacity: 100;
+    transform: translateY(0%);
+}
+
+#menuButton{
+    position: absolute;
+    right: 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 15px;
+    cursor: pointer;
+    top: 16px;
+}
+
+.lineBtn{
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: $secondaryColor;
+    transition: all 200ms;
+}
+
+.lineBtn::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $secondaryColor;
+    transform: translateY(-9px);
+    transition: all 200ms;
+}
+
+.lineBtn::after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: $secondaryColor;
+    transform: translateY(6px);
+    transition: all 200ms;
+}
+
+#menuButton:hover .lineBtn, 
+#menuButton:hover .lineBtn::after, 
+#menuButton:hover .lineBtn::before{
+    background-color: $mainColor;
+}
+
+.closeBtn .lineBtn::after{
+    transform:  translateY(-3px);
+}
+
+.closeBtn .lineBtn::before{
+    transform:  translateY(0px) rotate(90deg);
+}
+
+.closeBtn .lineBtn{
+    transform: rotate(45deg);
+}
+
+.openMenu{
+    height: 100vh;
+}
+
+
+
+
