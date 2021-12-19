@@ -1,6 +1,7 @@
 import { useRef } from "react";
 
 import "./Navbar.scss";
+import NavBarContent from "./navBarContent/NavBarContent";
 
 function Navbar(){
 
@@ -27,9 +28,7 @@ function Navbar(){
             <div id="menuButton" className="hamburguerBtn" onClick={toggleMenuShow}>
                 <div className="lineBtn"></div>
             </div>
-            <div className="test">
-
-            </div>
+            <NavBarContent></NavBarContent>
         </nav>
     );
 }
