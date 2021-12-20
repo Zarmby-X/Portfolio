@@ -43,13 +43,11 @@ $bgColor: #111517;
 }
 
 #navSocialMedia{
-    height: 50%;
     padding: 0px 40px;
     display: flex;
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
-    grid-column: 2 / 3;
 }
 
 .iconWrap{
@@ -62,25 +60,26 @@ $bgColor: #111517;
     transition: all 200ms;
     margin: 10px 0px;
     cursor: pointer;
-    float: left;
 }
 
 .navIcon:hover{
     fill: $secondaryColor;
 }
 
-.navIcon:hover +.infoIconText{
+.navIcon:hover + .infoIconText{
     opacity: 1;
     width: 100px;
 }
 
 .infoIconText{
     font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
     background-color: $mainColor;
     color: $secondaryColor;
     position: absolute;
-    height: 54px;
-    top: calc(50% - 26px);
+    height: 55px;
+    top: calc(50% - 28px);
     left: 70px;
     width: 0px;
     display: flex;
@@ -119,6 +118,68 @@ $bgColor: #111517;
 .navIconDesc:hover{
     fill: $mainColor;
     transform: scale(1.5);
+}
+
+@media (max-width: 570px) {
+    #navMenuWrap{
+        position: relative;
+        grid-template-columns: 100%;
+        grid-template-rows: 100%;
+    }
+    
+    #navMenuWrap > ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: calc(100vh - 120px);
+        min-height: 380px;
+    }
+
+    #navMenuWrap > ul > li > p{
+        text-align: center;
+        letter-spacing: 2px;
+    }
+
+    #navMenuWrap > ul > li:hover .NavOptionText{
+        padding-left: 20px;
+        border-right: 0px solid $secondaryColor;
+    }
+
+    #navSocialMedia{
+        margin: auto;
+        padding: 0px;
+        width: 100%;
+        height: 45px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        align-items: flex-end;
+        position: absolute;
+        bottom: 0px;
+    }
+
+    .navIcon{
+        fill: #444444;
+        width: 35px;
+        transition: all 200ms;
+        margin: 0px 0px;
+        cursor: pointer;
+        align-self: center;
+    }
+
+    .navIcon:hover + .infoIconText{
+        display: none;
+    }
+
+    .navInfoShow{
+        display: none;
+    }
+}
+
+@media(max-height: 500px){
+    .navInfoShow{
+        display: none;
+    }
 }
 
 
