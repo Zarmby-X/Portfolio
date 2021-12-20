@@ -115,27 +115,12 @@ nav{
 }
 
 .openMenu{
-    height: 100vh;
+    height: 100%;
 }
 
 @media(max-height: 500px){
-
-    .openMenu{
+    nav{
         overflow-y: scroll;
-    }
-
-    ::-webkit-scrollbar{
-        width: 10px;
-    }
-    
-    ::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 5px $secondaryColor;
-        border-radius: 10px;
-    }
-    
-    ::-webkit-scrollbar-thumb:hover {
-        background: $mainColor;
-        border-radius: 20px;
     }
 }
 

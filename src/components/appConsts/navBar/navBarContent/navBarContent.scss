@@ -13,6 +13,7 @@ $bgColor: #111517;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
+    padding-bottom: 10px;
 }
 
 #navMenuWrap > ul{
@@ -123,25 +124,24 @@ $bgColor: #111517;
 @media (max-width: 570px) {
     #navMenuWrap{
         position: relative;
-        grid-template-columns: 100%;
-        grid-template-rows: 100%;
+        display: flex;
     }
     
     #navMenuWrap > ul {
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: calc(100vh - 120px);
-        min-height: 380px;
+        border-right: 0px solid $mainColor;
+        justify-content: center;
+        margin-bottom: 60px;
     }
 
     #navMenuWrap > ul > li > p{
-        text-align: center;
+        text-align: justify;
         letter-spacing: 2px;
     }
 
     #navMenuWrap > ul > li:hover .NavOptionText{
-        padding-left: 20px;
         border-right: 0px solid $secondaryColor;
     }
 
