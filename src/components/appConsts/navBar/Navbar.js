@@ -6,15 +6,18 @@ import NavBarContent from "./navBarContent/NavBarContent";
 function Navbar(){
 
     const navRef = useRef();
+    const InfoIcons = useRef();
 
     const toggleMenuShow = (e) => {
         if(e.currentTarget.classList.contains("hamburguerBtn")){
             e.currentTarget.classList.replace("hamburguerBtn","closeBtn")
             navRef.current.classList.replace("closedMenu","openMenu")
+            InfoIcons.current.classList.replace("navInfoHidden","navInfoShow")
         }else{
             if(e.currentTarget.classList.contains("closeBtn")){
                 e.currentTarget.classList.replace("closeBtn","hamburguerBtn")
                 navRef.current.classList.replace("openMenu","closedMenu")
+                InfoIcons.current.classList.replace("navInfoShow","navInfoHidden")
             }
         }
     }
@@ -28,7 +31,7 @@ function Navbar(){
             <div id="menuButton" className="hamburguerBtn" onClick={toggleMenuShow}>
                 <div className="lineBtn"></div>
             </div>
-            <NavBarContent></NavBarContent>
+            <NavBarContent InfoIconsRef={InfoIcons}></NavBarContent>
         </nav>
     );
 }
