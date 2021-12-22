@@ -1,11 +1,9 @@
-import Navbar from "../appConsts/navBar/Navbar";
-
 import "./home.scss"
 
 function Home(){
  return(
      <div id="homePage">
-        <Navbar></Navbar>
+        <h1>Hola</h1>
      </div>
  );
 }

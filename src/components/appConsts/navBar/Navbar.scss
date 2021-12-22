@@ -11,10 +11,11 @@ $bgColor: #111517;
 nav{
     align-items: center;
     height: 80px;
-    position: relative;
     background-color: $bgColor;
     transition: all 500ms;
     overflow: hidden;
+    position: fixed;
+    width: 100%;
 }
 
 #logoContainer{
