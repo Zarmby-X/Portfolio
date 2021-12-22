@@ -6,11 +6,11 @@ function NavBarContent(props) {
     return (
         <div id="navMenuWrap">
             <ul>
-                <li><NavLink to={"/"} className="NavOptionText">Home</NavLink></li>
-                <li><NavLink to={"/About"} className="NavOptionText">About</NavLink></li>
-                <li><NavLink to={"/Proyects"} className="NavOptionText">Proyects</NavLink></li>
-                <li><NavLink to={"/Playground"} className="NavOptionText">Playground</NavLink></li>
-                <li><NavLink to={"/Contact"} className="NavOptionText">Contact</NavLink></li>
+                <li onClick={props.toggleMenuShow}><NavLink to={"/"} className="NavOptionText">Home</NavLink></li>
+                <li onClick={props.toggleMenuShow}><NavLink to={"/About"} className="NavOptionText">About</NavLink></li>
+                <li onClick={props.toggleMenuShow}><NavLink to={"/Proyects"} className="NavOptionText">Proyects</NavLink></li>
+                <li onClick={props.toggleMenuShow}><NavLink to={"/Playground"} className="NavOptionText">Playground</NavLink></li>
+                <li onClick={props.toggleMenuShow}><NavLink to={"/Contact"} className="NavOptionText">Contact</NavLink></li>
             </ul>
 
             <div id="navSocialMedia">

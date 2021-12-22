@@ -1,37 +1,54 @@
 import { useRef } from "react";
+import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
 import NavBarContent from "./navBarContent/NavBarContent";
+import { useLocation } from 'react-router-dom';
 
 function Navbar() {
 
     const navRef = useRef();
+    const navBtnRef = useRef();
     const InfoIcons = useRef();
+    const location = useLocation();
 
-    const toggleMenuShow = (e) => {
-        if (e.currentTarget.classList.contains("hamburguerBtn")) {
-            e.currentTarget.classList.replace("hamburguerBtn", "closeBtn")
+    const toggleMenuShow = () => {
+        if (navBtnRef.current.classList.contains("hamburguerBtn")) {
+            navBtnRef.current.classList.replace("hamburguerBtn", "closeBtn")
             navRef.current.classList.replace("closedMenu", "openMenu")
             InfoIcons.current.classList.replace("navInfoHidden", "navInfoShow")
         } else {
-            if (e.currentTarget.classList.contains("closeBtn")) {
-                e.currentTarget.classList.replace("closeBtn", "hamburguerBtn")
+            if (navBtnRef.current.classList.contains("closeBtn")) {
+                navBtnRef.current.classList.replace("closeBtn", "hamburguerBtn")
                 navRef.current.classList.replace("openMenu", "closedMenu")
                 InfoIcons.current.classList.replace("navInfoShow", "navInfoHidden")
             }
         }
     }
 
+    const toggleLogoFunction = () => {
+        if (navBtnRef.current.classList.contains("closeBtn")) {
+            navBtnRef.current.classList.replace("closeBtn", "hamburguerBtn")
+            navRef.current.classList.replace("openMenu", "closedMenu")
+            InfoIcons.current.classList.replace("navInfoShow", "navInfoHidden")
+        }
+    }
+
     return (
-        <div id="navbarContainer">
+        <div id="navbarContainer" className={location.pathname == "/NotFound" ? "hidde" : null}>
             <nav ref={navRef} className="closedMenu">
-                <div id="logoContainer">
-                    <p id="logo">Portfolio</p>
-                    <p id="logoHover">Portfolio</p>
+                <div id="logoContainer" onClick={toggleLogoFunction}>
+                    <NavLink to={"/"}>
+                        <p id="logo">Portfolio</p>
+                        <p id="logoHover">Portfolio</p>
+                    </NavLink>
                 </div>
-                <div id="menuButton" className="hamburguerBtn" onClick={toggleMenuShow}>
+                <div ref={navBtnRef} id="menuButton" className="hamburguerBtn" onClick={toggleMenuShow}>
                     <div className="lineBtn"></div>
                 </div>
-                <NavBarContent InfoIconsRef={InfoIcons}></NavBarContent>
+                <NavBarContent
+                    InfoIconsRef={InfoIcons}
+                    toggleMenuShow={toggleMenuShow}
+                ></NavBarContent>
             </nav>
         </div>
     );
