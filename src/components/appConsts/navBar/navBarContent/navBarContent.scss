@@ -28,12 +28,15 @@ $bgColor: #111517;
     cursor: pointer;
 }
 
-#navMenuWrap > ul > li > p{
+#navMenuWrap > ul > li > .NavOptionText{
+    display: block;
     font-size: 3rem;
     transition: all 300ms;
     padding-left: 20px;
     transition: all 500ms;
     user-select: none;
+    text-decoration: none;
+    color: $secondaryColor;
 }
 
 #navMenuWrap > ul > li:hover .NavOptionText{
@@ -136,7 +139,7 @@ $bgColor: #111517;
         margin-bottom: 60px;
     }
 
-    #navMenuWrap > ul > li > p{
+    #navMenuWrap > ul > li  .NavOptionText{
         text-align: justify;
         letter-spacing: 2px;
     }

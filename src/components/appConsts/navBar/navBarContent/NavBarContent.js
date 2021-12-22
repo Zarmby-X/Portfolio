@@ -1,15 +1,16 @@
 import "./NavBarContent.scss"
+import { NavLink } from "react-router-dom"
 
 function NavBarContent(props) {
 
     return (
         <div id="navMenuWrap">
             <ul>
-                <li><p className="NavOptionText">Home</p></li>
-                <li><p className="NavOptionText">About</p></li>
-                <li><p className="NavOptionText">Proyects</p></li>
-                <li><p className="NavOptionText">Playground</p></li>
-                <li><p className="NavOptionText">Contact</p></li>
+                <li><NavLink to={"/"} className="NavOptionText">Home</NavLink></li>
+                <li><NavLink to={"/About"} className="NavOptionText">About</NavLink></li>
+                <li><NavLink to={"/Proyects"} className="NavOptionText">Proyects</NavLink></li>
+                <li><NavLink to={"/Playground"} className="NavOptionText">Playground</NavLink></li>
+                <li><NavLink to={"/Contact"} className="NavOptionText">Contact</NavLink></li>
             </ul>
 
             <div id="navSocialMedia">
