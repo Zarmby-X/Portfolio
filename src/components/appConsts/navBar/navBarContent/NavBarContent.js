@@ -1,10 +1,6 @@
-import "./navBarContent.scss"
-
-
-
+import "./NavBarContent.scss"
 
 function NavBarContent(props) {
-
 
     return (
         <div id="navMenuWrap">
