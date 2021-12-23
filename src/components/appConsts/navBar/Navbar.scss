@@ -26,6 +26,7 @@ nav{
     overflow: hidden;
     position: fixed;
     width: 100%;
+    z-index: 2;
 }
 
 #logoContainer{
@@ -52,19 +53,19 @@ nav{
     font-size: 2.5rem;
     transition: all 200ms;
     position: absolute;
-    transform: translateY(20%);
+    transform: translateX(20%);
     opacity: 0;
     user-select: none;
 }
 
 #logoContainer:hover #logo{
     opacity: 0;
-    transform: translateY(-30%);
+    transform: translateX(-20%);
 }
 
 #logoContainer:hover #logoHover{
     opacity: 100;
-    transform: translateY(0%);
+    transform: translateX(0%);
 }
 
 #menuButton{
@@ -125,11 +126,24 @@ nav{
     transform: rotate(45deg);
 }
 
-.openMenu{
-    height: 100%;
+.closeBtn{
+    transform: translateY(10px);
+    transition: all 800ms;
 }
 
-@media(max-height: 500px){
+.hamburguerBtn{
+    transition: all 600ms;
+}
+
+.openMenu{
+    height: 100vh;
+}
+
+.closedMenu{
+    overflow: hidden;
+}
+
+@media(max-height: 580px){
     nav{
         overflow-y: scroll;
     }

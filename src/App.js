@@ -1,6 +1,7 @@
-import Home from "./components/home/Home";
+import Home from "./pages/home/Home";
 import Navbar from "./components/appConsts/navBar/Navbar";
 import { BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
+import Meme from "./pages/meme/Meme";
 
 function App() {
   return (
@@ -10,8 +11,11 @@ function App() {
         <Routes>
           <Route path="/" element={<Home></Home>}/>
           <Route path="/home" element={<Navigate to="/"/>}/>
-          <Route path="/About" element={<h1>Under construction</h1>} />
-          <Route path="/NotFound" element={<h1>Error: 404 not found</h1>} />
+          <Route path="/About" element={<Meme></Meme>} />
+          <Route path="/Proyects" element={<Meme></Meme>} />
+          <Route path="/Playground" element={<Meme></Meme>} />
+          <Route path="/Contact" element={<Meme></Meme>} />
+          <Route path="/NotFound" element={<a href="http://localhost:3000">error 404 no encontrado</a>} />
           <Route path="*" element={<Navigate to="/NotFound"/>} />
         </Routes>
       </BrowserRouter>

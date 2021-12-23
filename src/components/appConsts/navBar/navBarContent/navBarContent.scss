@@ -30,7 +30,7 @@ $bgColor: #111517;
 
 #navMenuWrap > ul > li > .NavOptionText{
     display: block;
-    font-size: 3rem;
+    font-size: 4rem;
     transition: all 300ms;
     padding-left: 20px;
     transition: all 500ms;
@@ -60,7 +60,7 @@ $bgColor: #111517;
 
 .navIcon{
     fill: #444444;
-    width: 55px;
+    width: 58px;
     transition: all 200ms;
     margin: 10px 0px;
     cursor: pointer;
@@ -72,7 +72,7 @@ $bgColor: #111517;
 
 .navIcon:hover + .infoIconText{
     opacity: 1;
-    width: 100px;
+    width: 116px;
 }
 
 .infoIconText{
@@ -82,9 +82,9 @@ $bgColor: #111517;
     background-color: $mainColor;
     color: $secondaryColor;
     position: absolute;
-    height: 55px;
-    top: calc(50% - 28px);
-    left: 70px;
+    height: 58px;
+    top: calc(50% - 29px);
+    left: 80px;
     width: 0px;
     display: flex;
     justify-content: center;
@@ -94,6 +94,10 @@ $bgColor: #111517;
     border-radius: 5px;
     user-select: none;
     transition: all 300ms;
+}
+
+.infoIconText > p{
+    font-size: 1.2rem;
 }
 
 .navInfoShow{
@@ -124,10 +128,11 @@ $bgColor: #111517;
     transform: scale(1.5);
 }
 
-@media (max-width: 570px) {
+@media (max-width: 708px) {
     #navMenuWrap{
         position: relative;
         display: flex;
+        width: 100vh;
     }
     
     #navMenuWrap > ul {
@@ -142,6 +147,8 @@ $bgColor: #111517;
     #navMenuWrap > ul > li  .NavOptionText{
         text-align: justify;
         letter-spacing: 2px;
+        font-size: 4rem;
+        width: 100%;
     }
 
     #navMenuWrap > ul > li:hover .NavOptionText{
@@ -151,14 +158,14 @@ $bgColor: #111517;
     #navSocialMedia{
         margin: auto;
         padding: 0px;
-        width: 100%;
-        height: 45px;
+        width: 100vw;
+        height: 105px;
         display: flex;
         justify-content: space-around;
         flex-direction: row;
-        align-items: flex-end;
+        align-items: flex-start;
         position: absolute;
-        bottom: 0px;
+        bottom: -60px;
     }
 
     .navIcon{
@@ -179,7 +186,7 @@ $bgColor: #111517;
     }
 }
 
-@media(max-height: 500px){
+@media(max-height: 700px){
     .navInfoShow{
         display: none;
     }

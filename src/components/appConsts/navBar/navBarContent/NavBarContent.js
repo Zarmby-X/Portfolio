@@ -1,52 +1,57 @@
-import "./NavBarContent.scss"
-import { NavLink } from "react-router-dom"
+import "./NavBarContent.scss";
+import { NavLink } from "react-router-dom";
+import Fade from 'react-reveal/Fade';
 
 function NavBarContent(props) {
 
     return (
         <div id="navMenuWrap">
-            <ul>
-                <li onClick={props.toggleMenuShow}><NavLink to={"/"} className="NavOptionText">Home</NavLink></li>
-                <li onClick={props.toggleMenuShow}><NavLink to={"/About"} className="NavOptionText">About</NavLink></li>
-                <li onClick={props.toggleMenuShow}><NavLink to={"/Proyects"} className="NavOptionText">Proyects</NavLink></li>
-                <li onClick={props.toggleMenuShow}><NavLink to={"/Playground"} className="NavOptionText">Playground</NavLink></li>
-                <li onClick={props.toggleMenuShow}><NavLink to={"/Contact"} className="NavOptionText">Contact</NavLink></li>
-            </ul>
+                <Fade when={props.showNavElements}>
+                <ul>
+                    <li onClick={props.toggleMenuShow}><NavLink to={"/"} className="NavOptionText">Home</NavLink></li>
+                    <li onClick={props.toggleMenuShow}><NavLink to={"/About"} className="NavOptionText">About</NavLink></li>
+                    <li onClick={props.toggleMenuShow}><NavLink to={"/Proyects"} className="NavOptionText">Proyects</NavLink></li>
+                    <li onClick={props.toggleMenuShow}><NavLink to={"/Playground"} className="NavOptionText">Playground</NavLink></li>
+                    <li onClick={props.toggleMenuShow}><NavLink to={"/Contact"} className="NavOptionText">Contact</NavLink></li>
+                    </ul>
+                </Fade>
 
-            <div id="navSocialMedia">
-                <div className="iconWrap">
-                    <svg className="navIcon" viewBox="0 0 128 128">
-                        <path d="M116.41 5.07H11.58a6.5 6.5 0 00-6.5 6.5v104.85a6.5 6.5 0 006.5 6.5H68V77.29H52.66V59.5H68V46.38c0-15.22 9.3-23.51 22.88-23.51a126 126 0 0113.72.7v15.91h-9.39c-7.39 0-8.82 3.51-8.82 8.66V59.5H104l-2.29 17.79H86.39v45.64h30a6.51 6.51 0 006.5-6.5V11.58a6.5 6.5 0 00-6.47-6.51z"></path>
-                    </svg>
-                    <div className="infoIconText">
-                        <p>Facebook</p>
+            <Fade when={props.showNavElements}>
+                <div id="navSocialMedia">
+                    <div className="iconWrap">
+                        <svg className="navIcon" viewBox="0 0 128 128">
+                            <path d="M116.41 5.07H11.58a6.5 6.5 0 00-6.5 6.5v104.85a6.5 6.5 0 006.5 6.5H68V77.29H52.66V59.5H68V46.38c0-15.22 9.3-23.51 22.88-23.51a126 126 0 0113.72.7v15.91h-9.39c-7.39 0-8.82 3.51-8.82 8.66V59.5H104l-2.29 17.79H86.39v45.64h30a6.51 6.51 0 006.5-6.5V11.58a6.5 6.5 0 00-6.47-6.51z"></path>
+                        </svg>
+                        <div className="infoIconText">
+                            <p>Facebook</p>
+                        </div>
+                    </div>
+                    <div className="iconWrap">
+                        <svg className="navIcon" viewBox="0 0 128 128">
+                            <path d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"></path>
+                        </svg>
+                        <div className="infoIconText">
+                            <p>LinkedIn</p>
+                        </div>
+                    </div>
+                    <div className="iconWrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="navIcon" viewBox="0 0 24 24">
+                            <path d="M12.036 5.339c-3.635 0-6.591 2.956-6.593 6.589-.001 1.483.434 2.594 1.164 3.756l-.666 2.432 2.494-.654c1.117.663 2.184 1.061 3.595 1.061 3.632 0 6.591-2.956 6.592-6.59.003-3.641-2.942-6.593-6.586-6.594zm3.876 9.423c-.165.463-.957.885-1.337.942-.341.051-.773.072-1.248-.078-.288-.091-.657-.213-1.129-.417-1.987-.858-3.285-2.859-3.384-2.991-.099-.132-.809-1.074-.809-2.049 0-.975.512-1.454.693-1.653.182-.2.396-.25.528-.25l.38.007c.122.006.285-.046.446.34.165.397.561 1.372.611 1.471.049.099.083.215.016.347-.066.132-.099.215-.198.33l-.297.347c-.099.099-.202.206-.087.404.116.198.513.847 1.102 1.372.757.675 1.395.884 1.593.983.198.099.314.083.429-.05.116-.132.495-.578.627-.777s.264-.165.446-.099 1.156.545 1.354.645c.198.099.33.149.38.231.049.085.049.482-.116.945zm3.088-14.762h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-6.967 19.862c-1.327 0-2.634-.333-3.792-.965l-4.203 1.103 1.125-4.108c-.694-1.202-1.059-2.566-1.058-3.964.002-4.372 3.558-7.928 7.928-7.928 2.121.001 4.112.827 5.609 2.325s2.321 3.491 2.32 5.609c-.002 4.372-3.559 7.928-7.929 7.928z" />
+                        </svg>
+                        <div className="infoIconText">
+                            <p>WhatsApp</p>
+                        </div>
+                    </div>
+                    <div className="iconWrap">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="navIcon" viewBox="0 0 24 24">
+                            <path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z" />
+                        </svg>
+                        <div className="infoIconText">
+                            <p>Email</p>
+                        </div>
                     </div>
                 </div>
-                <div className="iconWrap">
-                    <svg className="navIcon" viewBox="0 0 128 128">
-                        <path d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3zM39.17 107H21.06V48.73h18.11zm-9-66.21a10.5 10.5 0 1110.49-10.5 10.5 10.5 0 01-10.54 10.48zM107 107H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53V48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75z"></path>
-                    </svg>
-                    <div className="infoIconText">
-                        <p>LinkedIn</p>
-                    </div>
-                </div>
-                <div className="iconWrap">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="navIcon" viewBox="0 0 24 24">
-                        <path d="M12.036 5.339c-3.635 0-6.591 2.956-6.593 6.589-.001 1.483.434 2.594 1.164 3.756l-.666 2.432 2.494-.654c1.117.663 2.184 1.061 3.595 1.061 3.632 0 6.591-2.956 6.592-6.59.003-3.641-2.942-6.593-6.586-6.594zm3.876 9.423c-.165.463-.957.885-1.337.942-.341.051-.773.072-1.248-.078-.288-.091-.657-.213-1.129-.417-1.987-.858-3.285-2.859-3.384-2.991-.099-.132-.809-1.074-.809-2.049 0-.975.512-1.454.693-1.653.182-.2.396-.25.528-.25l.38.007c.122.006.285-.046.446.34.165.397.561 1.372.611 1.471.049.099.083.215.016.347-.066.132-.099.215-.198.33l-.297.347c-.099.099-.202.206-.087.404.116.198.513.847 1.102 1.372.757.675 1.395.884 1.593.983.198.099.314.083.429-.05.116-.132.495-.578.627-.777s.264-.165.446-.099 1.156.545 1.354.645c.198.099.33.149.38.231.049.085.049.482-.116.945zm3.088-14.762h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-6.967 19.862c-1.327 0-2.634-.333-3.792-.965l-4.203 1.103 1.125-4.108c-.694-1.202-1.059-2.566-1.058-3.964.002-4.372 3.558-7.928 7.928-7.928 2.121.001 4.112.827 5.609 2.325s2.321 3.491 2.32 5.609c-.002 4.372-3.559 7.928-7.929 7.928z" />
-                    </svg>
-                    <div className="infoIconText">
-                        <p>WhatsApp</p>
-                    </div>
-                </div>
-                <div className="iconWrap">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="navIcon" viewBox="0 0 24 24">
-                        <path d="M12 12.713l-11.985-9.713h23.971l-11.986 9.713zm-5.425-1.822l-6.575-5.329v12.501l6.575-7.172zm10.85 0l6.575 7.172v-12.501l-6.575 5.329zm-1.557 1.261l-3.868 3.135-3.868-3.135-8.11 8.848h23.956l-8.11-8.848z" />
-                    </svg>
-                    <div className="infoIconText">
-                        <p>Email</p>
-                    </div>
-                </div>
-            </div>
+            </Fade>
 
             <div ref={props.InfoIconsRef} className="navInfoHidden">
                 <div className="iconWrapDesc">
