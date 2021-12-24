@@ -10,16 +10,9 @@ $tertiaryColor: #444444;
     padding: 0px;
 }
 
-
-#bgImage{
-    width: 100%;
-    height: 100vh;
-    filter: grayscale(100%);
-}
-
 header{
     height: calc(100vh - 160px);
-    background: linear-gradient(225deg, $mainColor -10%, $bgColor 100%);
+    background: linear-gradient(225deg, $mainColor 0%, $bgColor 100%);
     position: relative;
     padding-bottom: 80px;
     overflow: hidden;
@@ -31,12 +24,13 @@ header{
     height: 100%;
     display: flex;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    margin: auto;
 }
 
 #tittleIdPage1{
     font-family: 'Barlow Condensed', sans-serif;
-    font-size: 4rem;
+    font-size: 3.5rem;
     letter-spacing: 1px;
     color: $secondaryColor;
     display: block; 
@@ -47,7 +41,7 @@ header{
 #tittleIdPage2{
     font-family: 'Barlow Condensed', sans-serif;
     letter-spacing: 1px;
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: $secondaryColor;
     display: block; 
     font-weight: normal;
@@ -59,15 +53,15 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-left: 80px;
-    height: 450px;
+    height: 100%;
 }
 
 #rightSideHeader{
     width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    overflow: hidden;
 }
 
 #Tittle-Line{
@@ -124,6 +118,7 @@ header{
     position: relative;
     user-select: none;
     border: 2px solid $bgColor;
+    filter: brightness(1.05);
 }
 
 #profileImg{
@@ -135,28 +130,68 @@ header{
 
 #headerBotton{
     margin: auto;
-    display: block;
-    width: 100%;
+    width: 90%;
     height: 80px;
     position: absolute;
     bottom: 0;
+    left: 5%;
 }
 
 #headerBottonContent{
     margin: auto;
-    width: 90%;
+    width: 100%;
+    height: 100%;
     border-top: 1px solid $tertiaryColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#leftLeftFooterSide{
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+#headerBottonContent > #leftLeftFooterSide > p{
+    font-family: 'Barlow Condensed', sans-serif;
+    color: $secondaryColor;
+    font-size: 1.5rem;
+    margin-left: 1%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#rigthLeftFooterSide{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#headerFooterIconsWrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 @media (max-width: 1399px){
     #tittleIdPage1{
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
     #tittleIdPage2{
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
     #headerDesc{
         font-size: 1rem;
+    }
+    #imgWrap{
+        width: 350px;
+        height: 350px;
+    }
+    #profileImg{
+        width: 450px;
+        top: -6px;
+        left: -50px;
     }
 }
 
@@ -176,18 +211,21 @@ header{
     #headerContent{
         display: grid;
         grid-template-columns: 1fr;
+        grid-row-gap: 5vw;
         width: 100%;
     }
 
     #rightSideHeader{
         grid-row: 1 / 2;
         width: 100%;
-        height: 200px;
+        height: 100%;
+        justify-content: center;
+        align-items: flex-end;
     }
 
     #leftSideHeader{
         margin: auto;
-        width: 90%;
+        width: 100%;
         padding: 0px;
         justify-content: flex-start;
         align-items: center;
@@ -222,6 +260,16 @@ header{
     #Tittle-Line{
         width: 0%; 
     }
+
+    #leftLeftFooterSide{
+        display: none;
+        width: 30%;
+    }
+
+    #rigthLeftFooterSide{
+        width: 100%;
+    }
+
 }
 
 @media (max-width: 379px){

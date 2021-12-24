@@ -1,0 +1,15 @@
+$mainColor: #EF0D33;
+$secondaryColor: #ffffff;
+$bgColor: #111517;;
+$tertiaryColor: #444444;
+
+.navBarFooterIcon{
+    width: 50px;
+    fill: $secondaryColor;
+    transition: all 300ms;
+    margin-left: 10px;
+}
+
+.navBarFooterIcon:hover{
+    transform: scale(1.2);
+}
