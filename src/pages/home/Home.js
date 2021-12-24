@@ -2,7 +2,8 @@ import React from "react";
 import "./Home.scss";
 import Profile from "../../img/Profile.jpg";
 import Fade from 'react-reveal/Fade';
-import { GitIcon, SassIcon, ReactIcon, JsIcon, HtmlIcon, CssIcon, NpmIcon, GitHubIcon } from "../../components/appConsts/icons/Icons"
+import { GitIcon, SassIcon, ReactIcon, JsIcon, NpmIcon, GitHubIcon } from "../../components/appConsts/icons/Icons"
+import { NavLink } from "react-router-dom";
 
 
 function Home() {
@@ -21,9 +22,11 @@ function Home() {
                         <Fade bottom>
                             <p id="headerDesc">Hi i'm Armando, i love design and create awesome web pages,
                                 I specialize in front-end development and i always want to learn new design techniques and technologies to improve my skills.</p>
-                            <div id="headerButtonWrap">
+                            <NavLink to={"/About"}>
+                                <div id="headerButtonWrap">
                                 <button id="headerButton">About me!</button>
-                            </div>
+                                </div>
+                            </NavLink>
                         </Fade>
                     </div>
                     <div id="rightSideHeader">
