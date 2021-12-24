@@ -16,7 +16,7 @@ function App() {
           <Route path="/Playground" element={<Meme></Meme>} />
           <Route path="/Contact" element={<Meme></Meme>} />
           <Route path="/NotFound" element={<a href="http://localhost:3000">error 404 no encontrado</a>} />
-          <Route path="*" element={<Navigate to="/NotFound"/>} />
+          <Route path="*" element={<Home></Home>} />
         </Routes>
       </BrowserRouter>
     </div>
