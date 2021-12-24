@@ -10,9 +10,9 @@ function App() {
       <BrowserRouter>
         <Navbar></Navbar>
         <Routes>
-          <Route path="/" element={<Home></Home>}/>
-          <Route path="/home" element={<Navigate to="/"/>}/>
-          <Route path="/Portfolio/" element={<Navigate to="/"/>}/>
+          <Route path="/Portfolio/" element={<Home></Home>}/>
+          <Route path="/home" element={<Navigate to="/Portfolio/"/>}/>
+          <Route path="/" element={<Navigate to="/Portfolio/"/>}/>
           <Route path="/About" element={<Meme></Meme>} />
           <Route path="/Proyects" element={<Meme></Meme>} />
           <Route path="/Playground" element={<Meme></Meme>} />

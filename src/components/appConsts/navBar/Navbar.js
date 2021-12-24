@@ -40,7 +40,7 @@ function Navbar() {
         <div id="navbarContainer" className={location.pathname === "/NotFound" ? "hidde" : null}>
             <nav ref={navRef} className="closedMenu">
                 <div id="logoContainer" onClick={toggleLogoFunction}>
-                    <NavLink to={"/"}>
+                    <NavLink to={"/Portfolio/"}>
                         <p id="logo">Portfolio</p>
                         <p id="logoHover">Portfolio</p>
                     </NavLink>

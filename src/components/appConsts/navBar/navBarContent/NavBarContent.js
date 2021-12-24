@@ -8,7 +8,7 @@ function NavBarContent(props) {
         <div id="navMenuWrap">
                 <Fade when={props.showNavElements}>
                 <ul>
-                    <li onClick={props.toggleMenuShow}><NavLink to={"/"} className="NavOptionText">Home</NavLink></li>
+                    <li onClick={props.toggleMenuShow}><NavLink to={"/Portfolio/"} className="NavOptionText">Home</NavLink></li>
                     <li onClick={props.toggleMenuShow}><NavLink to={"/About"} className="NavOptionText">About</NavLink></li>
                     <li onClick={props.toggleMenuShow}><NavLink to={"/Proyects"} className="NavOptionText">Proyects</NavLink></li>
                     <li onClick={props.toggleMenuShow}><NavLink to={"/Playground"} className="NavOptionText">Playground</NavLink></li>
