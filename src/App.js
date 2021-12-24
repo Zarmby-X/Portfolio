@@ -17,7 +17,7 @@ function App() {
           <Route path="/Proyects" element={<Meme></Meme>} />
           <Route path="/Playground" element={<Meme></Meme>} />
           <Route path="/Contact" element={<Meme></Meme>} />
-          <Route path="/NotFound" element={<Link to="https://zarmby-x.github.io/Portfolio/">error 404 no encontrado</Link>} />
+          <Route path="/NotFound" element={<Link to="/Portfolio/">error 404 no encontrado</Link>} />
           <Route path="*" element={<Navigate to="/NotFound"/>}/>
         </Routes>
       </BrowserRouter>
