@@ -11,14 +11,14 @@ function App() {
         <Navbar></Navbar>
         <Routes>
           <Route path="/Portfolio/" element={<Home></Home>}/>
-          <Route path="/home" element={<Navigate to="/Portfolio/"/>}/>
+          <Route path="/Portfolio/home" element={<Navigate to="/Portfolio/"/>}/>
           <Route path="/" element={<Navigate to="/Portfolio/"/>}/>
-          <Route path="/About" element={<Meme></Meme>} />
-          <Route path="/Proyects" element={<Meme></Meme>} />
-          <Route path="/Playground" element={<Meme></Meme>} />
-          <Route path="/Contact" element={<Meme></Meme>} />
-          <Route path="/NotFound" element={<Link to="/Portfolio/">error 404 no encontrado</Link>} />
-          <Route path="*" element={<Navigate to="/NotFound"/>}/>
+          <Route path="/Portfolio/About" element={<Meme></Meme>} />
+          <Route path="/Portfolio/Proyects" element={<Meme></Meme>} />
+          <Route path="/Portfolio/Playground" element={<Meme></Meme>} />
+          <Route path="/Portfolio/Contact" element={<Meme></Meme>} />
+          <Route path="/Portfolio/NotFound" element={<Link to="/Portfolio/">error 404 no encontrado</Link>} />
+          <Route path="/Portfolio/*" element={<Navigate to="/NotFound"/>}/>
         </Routes>
       </BrowserRouter>
     </div>

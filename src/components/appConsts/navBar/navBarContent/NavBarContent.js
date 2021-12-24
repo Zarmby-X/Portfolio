@@ -9,10 +9,10 @@ function NavBarContent(props) {
                 <Fade when={props.showNavElements}>
                 <ul>
                     <li onClick={props.toggleMenuShow}><NavLink to={"/Portfolio/"} className="NavOptionText">Home</NavLink></li>
-                    <li onClick={props.toggleMenuShow}><NavLink to={"/About"} className="NavOptionText">About</NavLink></li>
-                    <li onClick={props.toggleMenuShow}><NavLink to={"/Proyects"} className="NavOptionText">Proyects</NavLink></li>
-                    <li onClick={props.toggleMenuShow}><NavLink to={"/Playground"} className="NavOptionText">Playground</NavLink></li>
-                    <li onClick={props.toggleMenuShow}><NavLink to={"/Contact"} className="NavOptionText">Contact</NavLink></li>
+                    <li onClick={props.toggleMenuShow}><NavLink to={"/Portfolio/About"} className="NavOptionText">About</NavLink></li>
+                    <li onClick={props.toggleMenuShow}><NavLink to={"/Portfolio/Proyects"} className="NavOptionText">Proyects</NavLink></li>
+                    <li onClick={props.toggleMenuShow}><NavLink to={"/Portfolio/Playground"} className="NavOptionText">Playground</NavLink></li>
+                    <li onClick={props.toggleMenuShow}><NavLink to={"/Portfolio/Contact"} className="NavOptionText">Contact</NavLink></li>
                     </ul>
                 </Fade>
 
