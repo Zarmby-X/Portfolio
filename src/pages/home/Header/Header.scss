@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,500&family=Bebas+Neue&display=swap');
+
+$mainColor: #EF0D33;
+$secondaryColor: #ffffff;
+$bgColor: #111517;;
+$tertiaryColor: #444444;
+
+header{
+    height: calc(100vh - 160px);
+    background: linear-gradient(225deg, $mainColor 0%, $bgColor 100%);
+    position: relative;
+    padding-bottom: 80px;
+    overflow: hidden;
+    width: 100%;
+    min-height: calc(470px);
+}
+
+#headerContent{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+}
+
+#tittleIdPage1{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 3.5rem;
+    letter-spacing: 1px;
+    color: $secondaryColor;
+    display: block; 
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#tittleIdPage2{
+    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 1px;
+    font-size: 3.5rem;
+    color: $secondaryColor;
+    display: block; 
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+#leftSideHeader{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+#rightSideHeader{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+
+#Tittle-Line{
+    background-color: $mainColor;
+    width: 100%;
+    height: 3px;
+}
+
+#headerDesc{
+    color: $secondaryColor;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+#headerButtonWrap{
+    background-color: $mainColor;
+    width: 250px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: linear-gradient(90deg, $mainColor 50%, $bgColor 50%);
+    background-size: 500px;
+    transition: all 300ms;
+}
+
+#headerButton{
+    font-family: "Bebas Neue", cursive;
+    width: 250px;
+    height: 62px;
+    background-color: transparent;
+    color: $secondaryColor;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transition: all 300ms;
+    cursor: pointer;
+    border: 1px solid $bgColor;
+}
+
+#headerButtonWrap:hover{
+    background-position: -250px 0px;
+}
+
+#headerButtonWrap:hover #headerButton{
+    color: $mainColor;
+    border: 1px solid $mainColor;
+}
+
+#imgWrap{
+    width: 400px;
+    height: 400px;
+    border-radius: 500px;
+    overflow: hidden;
+    position: relative;
+    user-select: none;
+    border: 2px solid $bgColor;
+    filter: brightness(1.05);
+}
+
+#profileImg{
+    width: 550px;
+    position: absolute;
+    left: -80px;
+    top: -30px;
+}
+
+#headerBotton{
+    margin: auto;
+    width: 90%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+}
+
+#headerBottonContent{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border-top: 1px solid $tertiaryColor;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#leftLeftFooterSide{
+    display: flex;
+    justify-content: flex-start;
+    width: 50%;
+}
+
+#headerBottonContent > #leftLeftFooterSide > p{
+    font-family: 'Barlow Condensed', sans-serif;
+    color: $secondaryColor;
+    font-size: 1.5rem;
+    margin-left: 1%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#rigthLeftFooterSide{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#headerFooterIconsWrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (max-width: 1399px){
+    #tittleIdPage1{
+        font-size: 2.6rem;
+    }
+    #tittleIdPage2{
+        font-size: 2.6rem;
+    }
+    #headerDesc{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    #imgWrap{
+        width: 350px;
+        height: 350px;
+    }
+    #profileImg{
+        width: 450px;
+        top: -6px;
+        left: -50px;
+    }
+}
+
+@media (max-width: 1081px){
+    #tittleIdPage1{
+        font-size: 2rem;
+    }
+    #tittleIdPage2{
+        font-size: 2rem;
+    }
+    #headerDesc{
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 999px){
+    #headerContent{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 5vw;
+        width: 100%;
+    }
+
+    #rightSideHeader{
+        grid-row: 1 / 2;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    #leftSideHeader{
+        margin: auto;
+        width: 100%;
+        padding: 0px;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #imgWrap{
+        width: 150px;
+        height: 150px;
+    }
+
+    #profileImg{
+        width: 200px;
+        top: -6px;
+        left: -30px;
+    }
+
+    #headerDesc{
+        text-align: center;
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    #tittleIdPage1{
+        text-align: center;
+    }
+
+    #tittleIdPage2{
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    #Tittle-Line{
+        width: 0%; 
+    }
+
+    #leftLeftFooterSide{
+        display: none;
+        width: 30%;
+    }
+
+    #rigthLeftFooterSide{
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 379px){
+    #tittleIdPage2{
+        font-size: 1.5rem;
+    }
+    #headerDesc{
+        font-size: .8rem;
+    }
+    #headerButtonWrap{
+        width: 200px;
+        height: 60px;
+    }
+    #headerButton{
+        width: 200px;
+        height: 60px;
+    }
+    #tittleIdPage1{
+        display: none;
+    }
+}
