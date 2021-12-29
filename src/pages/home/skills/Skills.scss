@@ -1,0 +1,161 @@
+$mainColor: #EF0D33;
+$secondaryColor: #F5F5F5;
+$bgColor: #111517;
+$tertiaryColor: #444444;
+
+#skillsContainer{
+    background-color: $secondaryColor;
+}
+
+
+#skillsRightSide{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 200px;
+    padding-top: 20px;
+    width: 98%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.academyIcon{
+    width: 350px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height: 140px;
+}
+
+.medalIcon{
+    width: 85px;
+}
+
+.achivementTittle{
+    font-size: 1.2rem;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    color: $tertiaryColor;
+}
+
+.certificateIcon{
+    width: 80px;
+}
+
+@media (max-width: 1270px){
+    #skillsRightSide{
+        display: grid;
+        grid-template-columns: 1fr 225px 250px 225px 1fr;
+        height: 100%;
+        padding-top: 20px;
+        width: 99%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .academyIcon{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        height: 140px;
+    }
+
+    #medal1{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    #medal2{
+        grid-column: 4 / 5;
+        grid-row: 2 / 3;
+    }
+
+    #certificate2{
+        grid-column: 3 / 4;
+    }
+    
+    #certificate3{
+        grid-column: 5 / 6;
+    }
+}
+
+@media (max-width: 999px){
+    #skillsRightSide{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 5px;
+        padding-top: 0px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    #medal1{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    #medal2{
+        grid-column: 2 / 3;
+        grid-row: 2 / 3;
+    }
+
+    #certificate1{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #certificate2{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+    
+    #certificate3{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+}
+
+@media (max-width: 465px){
+
+    #skillsContainer{
+        padding: 10px 0px;
+    }
+
+    #skillsRightSide{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 5px;
+        padding-top: 0px;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    #medal1{
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    #medal2{
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    #certificate1{
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #certificate2{
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+    
+    #certificate3{
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+}

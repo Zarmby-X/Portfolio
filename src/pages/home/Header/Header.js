@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.scss";
 import Profile from "../../../img/Profile.jpg";
 import Fade from 'react-reveal/Fade';
-import { GitIcon, SassIcon, ReactIcon, JsIcon, NpmIcon, GitHubIcon } from "../../../components/appConsts/icons/Icons"
+import { GitIcon, SassIcon, ReactIcon, JsIcon, MysqlIcon, NodeJSIcon} from "../../../components/appConsts/icons/Icons"
 import { NavLink } from "react-router-dom";
 
 function Headers() {
@@ -20,11 +20,11 @@ function Headers() {
                     <Fade bottom>
                         <p id="headerDesc">Hi i'm Armando, i love design and create awesome web pages,
                             I specialize in front-end development and i always want to learn new design techniques and technologies to improve my skills.</p>
-                        <NavLink to={"/About"}>
-                            <div id="headerButtonWrap">
+                        <div id="headerButtonWrap">
+                            <NavLink to={"/About"}>
                                 <button id="headerButton">About me!</button>
-                            </div>
-                        </NavLink>
+                            </NavLink>
+                        </div>
                     </Fade>
                 </div>
                 <div id="rightSideHeader">
@@ -46,8 +46,8 @@ function Headers() {
                                         <JsIcon className={"navBarFooterIcon"}></JsIcon>
                                         <SassIcon className={"navBarFooterIcon"}></SassIcon>
                                         <ReactIcon className={"navBarFooterIcon"}></ReactIcon>
-                                        <GitHubIcon className={"navBarFooterIcon"}></GitHubIcon>
-                                        <NpmIcon className={"navBarFooterIcon"}></NpmIcon>
+                                        <NodeJSIcon className={"navBarFooterIcon"}></NodeJSIcon>
+                                        <MysqlIcon className={"navBarFooterIcon"}></MysqlIcon>
                                         <GitIcon className={"navBarFooterIcon"}></GitIcon>
                                     </div>
                                 </Fade>
