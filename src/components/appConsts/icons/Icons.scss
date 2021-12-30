@@ -13,3 +13,15 @@ $tertiaryColor: #444444;
 .navBarFooterIcon:hover{
     transform: scale(1.2);
 }
+
+.technologiesIcon{
+    fill: $secondaryColor;
+    width: 100px;
+    transition: all 300ms;
+    opacity: 80%;
+}
+
+.technologiesIcon:hover{
+    transform: scale(1.2);
+    opacity: 100%;
+}

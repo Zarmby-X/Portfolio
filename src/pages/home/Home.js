@@ -1,6 +1,7 @@
 import "./Home.scss";
 import Header from "./header/Header";
 import Skills from "./skills/Skills";
+import Technologies from "./technologies/Technologies";
 
 
 function Home() {
@@ -8,6 +9,7 @@ function Home() {
         <div id="homePage">
             <Header></Header>
             <Skills></Skills>
+            <Technologies></Technologies>
         </div>
     );
 }

@@ -1,0 +1,175 @@
+$mainColor: #EF0D33;
+$secondaryColor: #F5F5F5;
+$bgColor: #111517;
+$tertiaryColor: #444444;
+
+#TechnologiesContainer{
+    height: 100vh;
+    background: linear-gradient(225deg, $mainColor -50%, $bgColor 80%);
+    overflow: hidden;
+}
+
+#TechnologiesContent{
+    margin: auto;
+    width: 95%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#TechnologiesTittles{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+#TechnologiesTittle{
+    color: $secondaryColor;
+    font-family: "Bebas Neue", cursive;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#TittleSeparator{
+    background-color: $mainColor;
+    width: 80%;
+    height: 2px;
+    margin: 30px 0px;
+}
+
+#TechnologiesDesc{
+    color: $secondaryColor;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+#iconsWrap{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+}
+
+#TechnologiesIcons{
+    width: 95%;
+    height: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.technologiesIconWraper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.technologieMessageWrap{
+    position: absolute;
+    background-color: $bgColor;
+    width: 160px;
+    height: 30px;
+    bottom: -40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    opacity: 0;
+    transition: all 300ms;
+    transform: translateY(10px);
+}
+
+.technologieMessage{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: $secondaryColor;
+    text-transform: uppercase;
+}
+
+.iconContainer{
+    position: relative;
+    width: 125px;
+    height: 125px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconContainer:hover .technologieMessageWrap{
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+@media(max-width: 1043px){
+    
+    #TechnologiesContainer{
+        height: 1250px;
+    }
+
+    #TechnologiesContent{
+        margin: auto;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: stretch;
+
+    }
+
+    #TechnologiesTittles{
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }    
+
+    #TechnologiesIcons{
+        width: 100%;
+        height: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    #TechnologiesDescContainer{
+        width: 90%;
+    }
+
+    #TechnologiesDesc{
+        text-align: center;
+    }
+
+}
+
+@media(max-width: 437px){
+
+    #TechnologiesContainer{
+        background: linear-gradient(0deg, $mainColor -50%, $bgColor 100%);
+        height: 1650px;
+    }
+
+    #TechnologiesIcons{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #TittleSeparator{
+        background-color: $mainColor;
+        width: 90%;
+        height: 2px;
+        margin: 10px 0px;
+    }
+
+    #TechnologiesDesc{
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    #TechnologiesDescContainer{
+        width: 90%;
+    }
+}
