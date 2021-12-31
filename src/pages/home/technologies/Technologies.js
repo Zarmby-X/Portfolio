@@ -7,8 +7,8 @@ function Technologies() {
     return (
         <div id="TechnologiesContainer">
             <div id="TechnologiesContent">
-                <Fade bottom>
-                    <div id="TechnologiesTittles">
+                <div id="TechnologiesTittles">
+                    <Fade bottom>
                         <p id="TechnologiesTittle">Work Tools</p>
                         <div id="TittleSeparator"></div>
                         <div id="TechnologiesDescContainer">
@@ -16,11 +16,11 @@ function Technologies() {
                                 practices or that i studied with general knowledge in different courses and documentation to improve my Skills
                                 and have diferent solutions to problems.</p>
                         </div>
-                    </div>
-                </Fade>
+                    </Fade>
+                </div>
                 <div id="iconsWrap">
-                    <Fade bottom>
-                        <div id="TechnologiesIcons">
+                    <div id="TechnologiesIcons">
+                        <Fade bottom>
                             <div className="technologiesIconWraper">
                                 <div className="iconContainer">
                                     <GitIcon className="technologiesIcon"></GitIcon>
@@ -117,8 +117,8 @@ function Technologies() {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                    </Fade>
+                        </Fade>
+                    </div>
                 </div>
             </div>
         </div>

@@ -4,9 +4,9 @@ $bgColor: #111517;
 $tertiaryColor: #444444;
 
 #TechnologiesContainer{
-    height: 100vh;
+    min-height: 900px;
     background: linear-gradient(225deg, $mainColor -50%, $bgColor 80%);
-    overflow: hidden;
+    overflow:hidden;
 }
 
 #TechnologiesContent{
@@ -28,7 +28,7 @@ $tertiaryColor: #444444;
 #TechnologiesTittle{
     color: $secondaryColor;
     font-family: "Bebas Neue", cursive;
-    font-size: 4rem;
+    font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: 2px;
 }
@@ -67,6 +67,7 @@ $tertiaryColor: #444444;
     align-items: center;
     flex-direction: column;
     position: relative;
+    min-height: 200px;
 }
 
 .technologieMessageWrap{
@@ -74,7 +75,7 @@ $tertiaryColor: #444444;
     background-color: $bgColor;
     width: 160px;
     height: 30px;
-    bottom: -40px;
+    bottom: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,7 +95,7 @@ $tertiaryColor: #444444;
 .iconContainer{
     position: relative;
     width: 125px;
-    height: 125px;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -108,7 +109,7 @@ $tertiaryColor: #444444;
 @media(max-width: 1043px){
     
     #TechnologiesContainer{
-        height: 1250px;
+        padding-bottom: 30px;
     }
 
     #TechnologiesContent{
@@ -144,6 +145,9 @@ $tertiaryColor: #444444;
         text-align: center;
     }
 
+    #TechnologiesTittle{ 
+        font-size: 4rem;
+    }
 }
 
 @media(max-width: 437px){
@@ -165,8 +169,10 @@ $tertiaryColor: #444444;
     }
 
     #TechnologiesDesc{
-        font-size: 1rem;
+        font-size: .9rem;
         text-align: justify;
+        font-weight: bold;
+        letter-spacing: 1.5px;
     }
 
     #TechnologiesDescContainer{

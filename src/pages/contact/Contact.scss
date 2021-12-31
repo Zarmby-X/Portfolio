@@ -1,0 +1,107 @@
+$mainColor: #EF0D33;
+$secondaryColor: #ffffff;
+$bgColor: #111517;
+
+#contactContainer{
+    background: linear-gradient(225deg, $mainColor 0%, $bgColor 100%);
+    height: calc(100vh - 110px);
+    padding-top: 30px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#contactTopContainer{
+    justify-self: center;
+}
+
+.contactTittle{
+    text-align: center;
+    font-family: "Bebas Neue", cursive;
+    font-size: 5rem;
+    color: $secondaryColor;
+}
+
+.contactSeparator{
+    width: 10%;
+    height: 5px;
+    margin: auto;
+    background-color: $mainColor;
+}
+
+#SocialGrid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 60%;
+    margin-top: 40px;
+    grid-gap: 10px;
+}
+
+.socialContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: $bgColor;
+    border-radius: 10px;
+    padding-top: 10px;
+    transition: all 300ms;
+}
+
+.socialContainer:hover{
+    background-color: $mainColor;
+    transform: scale(1.03);
+}
+
+.socialName{
+    text-align: center;
+    color: $secondaryColor;
+    font-size: 3em;
+    font-family: "Bebas Neue", cursive;
+    text-decoration:none;
+}
+
+.contactLink{
+    text-decoration: none;
+}
+
+@media(max-width: 800px){
+
+    .contactTittle{
+        font-size: 4em;
+    }
+
+    #SocialGrid{
+        width: 85%;
+    }
+}
+
+@media(max-width: 543px){
+
+    #SocialGrid{
+        grid-template-columns: 1fr;
+        width: 85%;
+    }
+
+    .contactTittle{
+        font-size: 3em;
+    }
+
+    .contactSeparator{
+        width: 60%;
+    }
+    
+
+}
+
+@media(max-width: 330px){
+    .contactTittle{
+        font-size: 2.5em;
+    }
+
+    #SocialGrid{
+        margin-bottom: 10px;
+    }
+}

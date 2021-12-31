@@ -28,8 +28,26 @@ $tertiaryColor: #444444;
     height: 140px;
 }
 
+.certificateIcon:hover{
+    transform: scale(1.2);
+}
+
+.certificateIcon:hover ~ .achivementTittle{
+    transform: scale(1.2) translateY(8px);
+}
+
+.medalIcon:hover{
+    transform: scale(1.2);
+}
+
+.medalIcon:hover + .achivementTittle{
+    transform: scale(1.2) translateY(8px);
+}
+
 .medalIcon{
     width: 85px;
+    transition: all 300ms;
+    cursor: pointer;
 }
 
 .achivementTittle{
@@ -37,10 +55,13 @@ $tertiaryColor: #444444;
     text-align: center;
     font-family: 'Barlow Condensed', sans-serif;
     color: $tertiaryColor;
+    transition: all 300ms;
 }
+
 
 .certificateIcon{
     width: 80px;
+    transition: all 300ms;
 }
 
 @media (max-width: 1270px){
