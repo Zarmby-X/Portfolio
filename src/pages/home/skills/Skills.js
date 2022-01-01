@@ -36,7 +36,7 @@ function Skills() {
                     <Fade right>
                     <div id="certificate3" className="academyIcon">
                         <img className="certificateIcon" src={certificate} alt="certificate.Icon"></img>
-                        <p className="achivementTittle">Engineering degree - TI</p>
+                        <p className="achivementTittle">Engineering graduate - TI</p>
                     </div>
                     </Fade>
                 </div>

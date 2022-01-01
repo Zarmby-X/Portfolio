@@ -1,0 +1,116 @@
+$mainColor: #EF0D33;
+$secondaryColor: #ffffff;
+$tertiaryColor: #444444;
+$bgColor: #111517;
+
+.eventGrid{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    animation: fadeIn 2s linear;
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    70%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.eventContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.eventTittle{
+    color: $mainColor;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.eventAchivement{
+    color: $secondaryColor;
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+///upEvent///
+
+.lineBranchUp{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.lineBranchUp > .underStickLine{
+    background-color: $tertiaryColor;
+    width: 20%;
+    height: 2px;
+    justify-self: flex-start;
+}
+
+.lineBranchUp > .stickLine{
+    background-color: $tertiaryColor;
+    height: 100%;
+    width: 2px;
+}
+
+.lineBranchUp > .pointLine{
+    width: 20px;
+    height: 20px;
+    background-color: $mainColor;
+    border-radius: 100px;
+    position: absolute;
+    bottom: -11px;
+    left: calc(50% - 10px);
+}
+
+///downEvent///
+
+.lineBranchDown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.lineBranchDown > .underStickLine{
+    background-color: $tertiaryColor;
+    width: 20%;
+    height: 2px;
+    justify-self: flex-start;
+}
+
+.lineBranchDown > .stickLine{
+    background-color: $tertiaryColor;
+    height: 100%;
+    width: 2px;
+}
+
+.lineBranchDown > .pointLine{
+    width: 20px;
+    height: 20px;
+    background-color: $mainColor;
+    border-radius: 100px;
+    position: absolute;
+    top: -11px;
+    left: calc(50% - 10px);
+}
+
+
+
+
+

@@ -30,3 +30,36 @@ $tertiaryColor: #444444;
     width: 25%;
     fill: $secondaryColor;
 }
+
+.cartelAbout{
+    width: 150px;
+    fill: $secondaryColor;
+    animation: Appear .9s linear;
+    transform: rotateZ(-10deg);
+    opacity: 1;
+    height: 100%;
+}
+
+@keyframes Appear {
+    0%{
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    55%{
+        opacity: 1;
+    }
+    60%{
+        transform: translateY(-30px);
+    }
+    70%{
+        transform: rotateZ(10deg);
+    }
+    80%{
+        transform: rotateZ(-10deg);
+    }
+    100%{
+        transform: translateY(0px);
+        transform: rotateZ(-10deg);
+    }
+}
+
