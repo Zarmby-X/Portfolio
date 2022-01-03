@@ -1,8 +1,16 @@
 import "./Event.scss"
+import { useRef } from "react";
 
 export function EventUp(props) {
+
+    let eventAppears = useRef(null);
+
+    setTimeout(() => {
+        eventAppears.current.classList.replace("hidde","inAnimation")
+    }, props.delayTime);
+
     return (
-        <div className="eventGrid">
+        <div id={props.id} ref={eventAppears} className="eventGrid hidde">
             <div className="eventContainer">
                 <p className="eventTittle">{props.eventName}</p>
                 {props.secondaryName ? <p className="eventAchivement">{props.secondaryName}</p> : null}
@@ -17,8 +25,15 @@ export function EventUp(props) {
 }
 
 export function EventDown(props) {
+
+    let eventAppears = useRef(null);
+
+    setTimeout(() => {
+        eventAppears.current.classList.replace("hidde","inAnimation")
+    }, props.delayTime);
+
     return (
-        <div className="eventGrid">
+        <div id={props.id} ref={eventAppears} className="eventGrid hidde">
             <div className="lineBranchDown">
                 <div className="pointLine"></div>
                 <div className="stickLine"></div>
@@ -31,3 +46,34 @@ export function EventDown(props) {
         </div>
     );
 }
+
+export function DateUp(props){
+
+    let dateAppears = useRef(null);
+
+    setTimeout(() => {
+        dateAppears.current.classList.replace("hidde","inAnimation")
+    }, props.delayTime);
+
+    return(
+        <div ref={dateAppears} className="dateContainerUp hidde">
+            <p className="date">{props.Date}</p>
+        </div>
+    );
+}
+
+
+export function DateDown(props){
+    let dateAppears = useRef(null);
+
+    setTimeout(() => {
+        dateAppears.current.classList.replace("hidde","inAnimation")
+    }, props.delayTime);
+
+    return(
+        <div ref={dateAppears} className="dateContainerDown hidde">
+            <p className="date">{props.Date}</p>
+        </div>
+    );
+}
+

@@ -6,6 +6,9 @@ $bgColor: #111517;
 .eventGrid{
     display: grid;
     grid-template-rows: 1fr 1fr;
+}
+
+.inAnimation{
     animation: fadeIn 2s linear;
 }
 
@@ -109,6 +112,183 @@ $bgColor: #111517;
     top: -11px;
     left: calc(50% - 10px);
 }
+
+.hidde{
+    opacity: 0;
+}
+
+
+.dateContainerUp{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10px;
+}
+
+.dateContainerDown{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+}
+
+.date{
+    color: $secondaryColor;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 2rem;
+}
+
+@media(max-width: 1516px){
+    .eventAchivement{
+        font-size: 1.2rem;
+    }
+}
+
+
+@media(max-width: 1213px){
+    .eventAchivement{
+        font-size: 1rem;
+    }
+}
+
+@media(max-width:1011px){
+
+    .eventGrid{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .eventContainer{
+        grid-column: 1 / 2;
+        align-items: flex-start;
+        margin-left: 30px;
+    }
+
+    .lineBranchDown{
+      display: none;
+    }
+
+    .lineBranchUp{
+        display: none;
+    }
+
+    .dateContainerUp{
+        grid-column: 1 / 2;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0px;
+        margin-right: 30px;
+    }
+
+    .dateContainerDown{
+        grid-column: 1 / 2;
+        padding: 0px;
+        justify-content: flex-end;
+        align-items: center;
+        margin-right: 30px;
+    }
+
+    .lineBranchUp{
+        grid-column: 3 / 4;
+    }
+
+    .lineBranchDown{
+        grid-column: 3 / 4;
+    }
+
+    .eventGrid{
+        grid-column: 3 / 4;
+    }
+
+    #event1{
+        grid-row: 1 / 2;
+    }
+    #event2{
+        grid-row: 2 / 3;
+    }
+    #event3{
+        grid-row: 3 / 4;
+    }
+    #event4{
+        grid-row: 4 / 5;
+    }
+    #event5{
+        grid-row: 5 / 6;
+    }
+    #event6{
+        grid-row: 6 / 7;
+    }
+
+    .eventTittle{
+        font-size: 2rem;
+    }
+
+    .eventAchivement{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:630px){
+    .eventTittle{
+        font-size: 1.5rem;
+    }
+
+    .eventAchivement{
+        font-size: 1rem;
+    }
+
+    .date{
+        font-size: 1.5rem;
+    }
+}
+
+
+@media(max-width:420px){
+    .dateContainerDown{
+        margin: 0px;
+        justify-content: center;
+    }
+
+    .dateContainerUp{
+        margin: 0px;
+        justify-content: center;
+    }
+
+    .eventContainer{
+        justify-content: center;
+        align-items: center;
+        margin: 0px;
+    }
+
+    .eventTittle{
+        font-size: 1.5rem;
+    }
+
+    .eventAchivement{
+        font-size: 1rem;
+    }
+
+    .date{
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:335px){
+    .eventTittle{
+        font-size: 1.2rem;
+    }
+
+    .eventAchivement{
+        font-size: .7rem;
+    }
+
+    .date{
+        font-size: 1.5rem;
+    }
+}
+
+
+
 
 
 

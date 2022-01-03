@@ -4,12 +4,18 @@ $tertiaryColor: #444444;
 $bgColor: #111517;
 
 #timeLineContainer{
-    height: calc(100vh - 82px);
+    height: calc(100vh - 80px);
+    min-height: 625px;
     background-color: $bgColor;
-    border-top: 2px solid $tertiaryColor;
     display: grid;
     grid-template-rows: 200px 1fr;
+    overflow-y: auto;
 }
+
+.quit{
+    display: none !important;
+}
+
 
 #cardelContainer{
     display: flex;
@@ -77,8 +83,6 @@ $bgColor: #111517;
     height: 2px;
     background-color: $mainColor;
     animation: lineEnter 1s linear;
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
 }
 
 @keyframes lineEnter{
@@ -90,7 +94,54 @@ $bgColor: #111517;
     }
 }
 
-.lineplaceholder{
+@media(max-width:1011px){
+    #lineContainer{
+        grid-template-columns: 1fr 2px 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        width: 100%;
+        overflow: hidden;
+        height: 95%;
+    }
+
+    #lineWrap{
+     grid-column: 2 / 3;
+     grid-row: 1 / -1;
+    }
+
+    #line{
+        width: 100%;
+        height: 100%;
+        background-color: $mainColor;
+        animation: lineEnter 1s linear;
+    }
+
     
+    @keyframes lineEnter{
+        0%{
+            transform: translateY(-100vh);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
 }
 
+@media(max-width:630px){
+    #timeLineContainer{
+        grid-template-rows: 100px 1fr;
+    }
+
+    #leftTittle, #rightTittle{
+        font-size: 7rem;
+    }
+}
+
+@media(max-width:420px){
+    #timeLineContainer{
+        grid-template-rows: 80px 1fr;
+    }
+
+    #leftTittle, #rightTittle{
+        font-size: 5rem;
+    }
+}

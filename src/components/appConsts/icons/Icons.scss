@@ -40,6 +40,19 @@ $tertiaryColor: #444444;
     height: 100%;
 }
 
+
+@media(max-width:630px){
+    .cartelAbout{
+        width: 7rem;
+    }
+}
+
+@media(max-width:420px){
+    .cartelAbout{
+        width: 5rem;
+    }
+}
+
 @keyframes Appear {
     0%{
         transform: translateY(100px);
