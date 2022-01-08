@@ -1,0 +1,217 @@
+$mainColor: #EF0D33;
+$secondaryColor: #ffffff;
+$tertiaryColor: #444444;
+$bgColor: #111517;
+
+#aboutExperienceContainer{
+    height: calc(100vh - 80px);
+    display: grid;
+    grid-template-rows: 150px 1fr;
+    grid-template-columns: 1fr;
+    background: linear-gradient(225deg, $mainColor 0%, $bgColor 100%);
+    overflow-x: hidden;
+    min-height: 800px;
+    padding-bottom: 30px;
+}
+
+#experienceTittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    grid-column: 1 / 3;
+    margin-top: 30px;
+}
+
+#experienceTittleText{
+    color: $secondaryColor;
+    font-family: "Bebas Neue", cursive;
+    font-size: 150px;
+}
+
+#experiencesWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.experienceGrid{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    overflow: hidden;
+}
+
+.logoExperienceWrap{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.experienceLogo{
+    width: 150px;
+}
+
+.textExperienceWrap{
+    display: grid;
+    grid-template-rows: 31px 1fr;
+}
+
+.experienceTittle{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    text-align: justify;
+    letter-spacing: 1px;
+    font-weight: bold;
+    color: $mainColor;
+}
+
+.experienceSeparator{
+    height: 1px;
+    width: 100%;
+    background-color: $tertiaryColor;
+}
+
+.experienceDesc{
+    color: $secondaryColor;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+
+#experienceIconWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width:890px){
+
+    #aboutExperienceContainer{
+        min-height: 650px;
+    }
+
+    #experienceTittleText{
+        font-size: 7rem;
+    }
+
+    .experienceLogo{
+        width: 125px;
+    }
+
+    .experienceTittle{
+        font-size: 1rem;
+    }
+
+    .experienceDesc{
+        font-size: 1rem;
+    }
+
+    .experienceGrid{
+        width: 90%;
+    }
+}
+
+@media(max-width:680px){
+
+    #aboutExperienceContainer{
+        grid-template-rows: 6rem 1fr;
+    }
+
+    .experienceGrid{
+        grid-template-columns:1fr;
+    }
+
+    .logoExperienceWrap{
+        justify-content: center;
+    }
+
+    #experienceTittle{
+        margin-top: 10px;
+    }
+
+    .experienceLogo{
+        width: 100px;
+    }
+
+    .experienceDesc{
+        text-align: center;
+    }
+
+    #experienceTittleText{
+        font-size: 5rem;
+    }
+
+    .experienceSeparator{
+        opacity: 0;
+    }
+
+}
+
+@media(max-width:525px){
+
+    #aboutExperienceContainer{
+        grid-template-rows: 6rem 1fr;
+    }
+
+    #experienceTittle{
+        margin-top: 0px;
+        font-size: .8rem;
+    }
+
+    .experienceDesc{
+        font-size: .8rem;
+    }
+
+    #experienceTittleText{
+        font-size: 4rem;
+    }
+
+    .experienceGrid{
+        width: 95%;
+    }
+
+    .experienceLogo{
+        width: 100px;
+    }
+
+    .experienceSeparator{
+        opacity: 0;
+    }
+
+    .experienceDesc{
+        text-align: justify;
+    }
+
+}
+
+@media(max-width:375px){
+
+    #aboutExperienceContainer{
+        grid-template-rows: 5rem 1fr;
+    }
+
+    #experienceTittle{
+        margin-top: 0px;
+    }
+
+    #experienceTittleText{
+        font-size: 3rem;
+    }
+
+    .experienceDesc{
+        text-align: justify;
+    }
+
+    .experienceLogo{
+        width: 90px;
+    }
+}
+

@@ -1,7 +1,13 @@
+import { useEffect } from "react";
 import "./Contact.scss"
 import { FacebookIcon, WhatsAppIcon, LinkedInIcon, EmailIcon } from "../../components/appConsts/icons/Icons";
 
 function Contact() {
+
+    useEffect(()=>{
+        window.scrollTo(0, 0)
+    },[])
+
     return (
         <div id="contactContainer">
             <div id="contactTopContainer">

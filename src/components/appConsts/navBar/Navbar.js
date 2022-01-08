@@ -20,6 +20,7 @@ function Navbar() {
             setShowNavElements(true);
         } else {
             if (navBtnRef.current.classList.contains("closeBtn")) {
+                navBtnRef.current.scrollIntoView(false)
                 navBtnRef.current.classList.replace("closeBtn", "hamburguerBtn")
                 navRef.current.classList.replace("openMenu", "closedMenu")
                 InfoIcons.current.classList.replace("navInfoShow", "navInfoHidden")

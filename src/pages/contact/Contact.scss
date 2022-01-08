@@ -5,12 +5,14 @@ $bgColor: #111517;
 #contactContainer{
     background: linear-gradient(225deg, $mainColor 0%, $bgColor 100%);
     height: calc(100vh - 110px);
+    min-height: 500px;
     padding-top: 30px;
-    overflow-y: auto;
+    overflow-y: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding-bottom: 30px;
 }
 
 #contactTopContainer{
@@ -80,9 +82,16 @@ $bgColor: #111517;
 
 @media(max-width: 543px){
 
+    #contactContainer{
+        display: grid;
+        grid-template-rows: 100px 1fr;
+        grid-column: 1fr;
+        min-height: 800px;
+    }
+
     #SocialGrid{
         grid-template-columns: 1fr;
-        width: 85%;
+        width: 100%;
     }
 
     .contactTittle{

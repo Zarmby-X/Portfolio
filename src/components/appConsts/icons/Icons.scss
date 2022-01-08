@@ -76,3 +76,35 @@ $tertiaryColor: #444444;
     }
 }
 
+.experienceIcon{
+    width: 8rem;
+    margin: 0 10px;
+}
+
+@media(max-width:890px){
+    .experienceIcon{
+        width:  6rem;
+    }
+}
+
+
+@media(max-width:680px){
+    .experienceIcon{
+        width:  4rem;
+    }
+}
+
+@media(max-width:525px){
+    .experienceIcon{
+        width:  3.5rem;
+        margin: 0 2.5px;
+    }
+}
+
+@media(max-width:375px){
+    .experienceIcon{
+        width:  2.5rem;
+        margin: 0 2px;
+    }
+}
+
