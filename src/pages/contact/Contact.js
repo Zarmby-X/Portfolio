@@ -28,7 +28,7 @@ function Contact() {
                         <p className="socialName">LinkedIn</p>
                     </div>
                 </a>
-                <a className="contactLink" href="https://api.whatsapp.com/send/?phone=4491881529" target="_blank" rel="noopener noreferrer">
+                <a className="contactLink" href="https://wa.me/524491881529" target="_blank" rel="noopener noreferrer">
                     <div className="socialContainer">
                         <WhatsAppIcon className="contactIcon"></WhatsAppIcon>
                         <p className="socialName">WhatsApp</p>

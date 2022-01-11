@@ -1,0 +1,195 @@
+$mainColor: #EF0D33;
+$secondaryColor: #ffffff;
+$tertiaryColor: #444444;
+$bgColor: #111517;
+
+#historyContainer{
+    min-height: calc(100vh - 80px);
+    background-color: $bgColor;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 40px;
+    overflow: hidden;
+}
+
+#tittleContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.historyTittle{
+    color: $secondaryColor;
+    font-family: "Bebas Neue", cursive;
+    font-size: 150px;
+}
+
+#leftSideHistory{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center ;
+    overflow: hidden;
+}
+
+#historyAvatarIcon{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.PersonalTittle{
+    color: $mainColor;
+    font-family: "Bebas Neue", cursive;
+    font-size: 2rem;
+}
+
+.historyDesc{
+    color: $secondaryColor;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: .5px;
+    text-align: justify;
+}
+
+#rightSideHistory{
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    
+}
+
+.personalCaracteristic2{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-column: 2 / 3;
+}
+
+.historyIconContainer{
+    position: relative;
+}
+
+.historyIconsWrap{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    position: relative;
+}
+
+.historyIcon{
+    width: 60px;
+    transition: all 300ms;
+}
+
+.historyIcon:hover{
+    transform: scale(1.2);
+}
+
+.historyIcon:hover + .historyIconDesc{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.historyIconDesc{
+    width: 150px;
+    height: 50px;
+    background-color: $tertiaryColor;
+    position: absolute;
+    bottom: -60px;
+    left: calc(-75px + 30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 300ms;
+}
+
+.historyIconDescText{
+    color: $secondaryColor;
+    font-family: "Bebas Neue", cursive;
+    font-size: 2rem;
+}
+
+@media(max-width: 1430px){
+
+    #historyContainer{
+        padding-bottom: 50px;
+    }
+
+    .historyDesc{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+}
+
+@media(max-width: 1280px){
+    .historyDesc{
+        font-size: .8rem;
+        font-weight: bold;
+    }
+}
+
+@media(max-width: 749px){
+
+    .historyDesc{
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    .personalCaracteristic2{
+        margin: 15px 0px;
+    }
+
+    #historyContainer{
+        height: calc(100%);
+        padding-top: 30px;
+    }
+
+    #leftSideHistory{
+        grid-column: 1 / -1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center ;
+        overflow: hidden;
+    }
+  
+    #historyAvatarIcon{
+        width: 100%;
+        margin-left: 0%;
+    }
+    
+    #rightSideHistory{
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+        width: 100%;
+        align-items: center;
+    }
+}
+
+@media(max-width: 500px){
+
+    .historyIcon{
+        width: 40px;
+    }
+    
+    .historyIconDesc{
+        width: 100px;
+        left: calc(-50px + 20px);
+        border-radius: 15px;
+    }
+    
+    .historyIconDescText{
+        color: $secondaryColor;
+        font-family: "Bebas Neue", cursive;
+        font-size: 1.3rem;
+    }    
+}
