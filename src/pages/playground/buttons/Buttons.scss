@@ -1,0 +1,285 @@
+$mainColor: #EF0D33;
+$secondaryColor: #ffffff;
+$tertiaryColor: #444444;
+$bgColor: #111517;
+
+#ButtonsContainer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $bgColor;
+    flex-direction:column;
+    border-top: 1px solid $tertiaryColor;
+    overflow: hidden;
+}
+
+.PracticeWrapp{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction:column;
+    width: 100%;
+}
+
+.ExperimentTittle{
+    color: $secondaryColor;
+    font-size: 8rem;
+    font-family: "Bebas Neue", cursive; 
+    margin: 30px 0px;
+    letter-spacing: 2px;
+}
+
+.Button1{
+    width: 300px;
+    height: 100px;
+    border: 1px solid $mainColor;
+    background: linear-gradient(90deg, $mainColor 50%, $bgColor 50%);
+    background-size: 600px 400px;
+    font-family: "Bebas Neue", cursive;
+    color: $secondaryColor;
+    font-size: 4rem;
+    transition: all 300ms;
+    margin: 10px 0px;
+}
+
+#Slide3{
+    background: linear-gradient(180deg, $mainColor 50%, $bgColor 50%);
+    background-size: 300px 200px;
+    
+}
+
+#Slide4{
+    background: linear-gradient(180deg, $mainColor 50%, $bgColor 50%);
+    background-size: 300px 200px;
+}
+
+.buttonsWrap{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    position: relative;
+    min-height: 70px;
+}
+
+#Slide1:hover{
+    background-position: -300px;
+}
+
+#Slide2:hover{
+    background-position: 300px;
+}
+
+#Slide3:hover{
+    background-position-y: 100px;
+}
+
+#Slide4:hover{
+    background-position-y: -100px;
+}
+
+.separator{
+    width: 95%;
+    height: 2px;
+    background-color: $tertiaryColor;
+    margin: 30px 0px;
+}
+
+.button2{
+    width: 300px;
+    height: 100px;
+    border: 1px solid $tertiaryColor;
+    font-family: "Bebas Neue", cursive;
+    color: $mainColor;
+    font-size: 4rem;
+    transition: all 300ms;
+    margin: 10px 0px;
+    background-color: transparent;
+    position: relative;
+}
+
+.button2::before{
+    background-color: $secondaryColor;
+    content: " ";
+    height: 5px;
+    width: calc(100% + 1px);
+    position: absolute;
+    bottom: -1px;
+    left: -1px;
+}
+
+#underLine1::before{
+    transform: translateX(-100%);
+    transition: all 300ms;
+}
+
+.button2Wrap{
+    overflow: hidden;
+}
+
+.button2Wrap:hover #underLine1::before{
+    transform: translateX(1px);
+}
+
+.button2Wrap:hover .button2{
+    color: $secondaryColor;
+}
+
+#underLine2::before{
+    transform: scaleX(0);
+    transition: all 300ms;
+}
+
+.button2Wrap:hover #underLine2::before{
+    transform: scaleX(1);
+}
+
+#underLine3::before{
+    transform: translateX(calc(100% + 1px));
+    transition: all 300ms;
+}
+
+.button2Wrap:hover #underLine3::before{
+    transform: translateX(0%);
+}
+
+.button3Wrap{
+    width: 100px;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    margin: 20px 0px;
+    
+}
+
+.button3Wrap:hover > .button3,
+.button3Wrap:hover > .button3::before,
+.button3Wrap:hover > .button3::after{
+    background-color: $secondaryColor;
+}
+
+.button3{
+    width: 100%;
+    height: 10px;
+    background-color: $mainColor;
+    border-radius: 100px;
+    position: relative;
+    transition: all 300ms;
+    position: absolute;
+}
+
+.button3::before{
+    display: block;
+    content: " ";
+    width: 100%;
+    height: 10px;
+    background-color: $mainColor;
+    border-radius: 100px;
+    transform: translateY(-30px);
+    transition: all 300ms;
+    position: absolute;
+}
+
+.button3::after{
+    display: block;
+    content: " ";
+    width: 100%;
+    height: 10px;
+    background-color: $mainColor;
+    border-radius: 100px;
+    transform: translateY(30px);
+    transition: all 300ms;
+    position: absolute;
+}
+
+.deform1On > .button3::after{
+    transform: translateX(100%) rotateZ(135deg);
+}
+
+.deform1On > .button3{
+    background-color: transparent !important;
+    transform: translateX(-100%);
+}
+    
+.deform1On > .button3::before{
+    transform: translateX(100%) rotateZ(-135deg);
+}
+
+.deform2On > .button3::after{
+    transform:  rotateZ(-90deg);
+}
+
+.deform2On > .button3{
+    transform: rotateZ(45deg);
+}
+    
+.deform2On > .button3::before{
+    transform: rotateZ(0deg);
+}
+
+.deform3On > .button3::after{
+    transform:  rotateZ(90deg);
+}
+
+.deform3On > .button3{
+    transform: rotateZ(405deg);
+}
+    
+.deform3On > .button3::before{
+    transform: rotateZ(0deg);
+}
+
+.deform4On > .button3::after{
+    transform:  rotateZ(90deg) scaleX(.8);
+    bottom: 35px;
+    background-color:$secondaryColor;
+}
+
+.deform4On > .button3{
+    transform: rotateZ(405deg);
+    height: 80px;
+    width: 80px;
+    border-radius: 100%;
+}
+    
+.deform4On > .button3::before{
+    transform: rotateZ(0deg) scaleX(.8);
+    top: 35px;
+    background-color: $secondaryColor;
+}
+
+.deform4On:hover > .button3::before,
+.deform4On:hover > .button3::after{
+    background-color: $tertiaryColor !important;
+}
+
+@media(max-width: 1305px){
+    .Button1, .button2Wrap{
+        transform: scale(.8);
+    }
+}
+
+@media(max-width: 675px){
+
+    .Button1, .button2Wrap{
+        transform: scale(.9);
+    }
+
+    .buttonsWrap{
+        display: flex;
+        width: 100%;    
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 500px){
+
+    .ExperimentTittle{
+        font-size: 4rem;
+    }
+}

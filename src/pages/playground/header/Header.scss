@@ -1,0 +1,254 @@
+$mainColor: #EF0D33;
+$secondaryColor: #ffffff;
+$tertiaryColor: #444444;
+$bgColor: #111517;
+
+#playgroundHeaderContainer{
+    height: calc(100vh - 80px);
+    background-color: $bgColor;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+}
+
+#astronaut{
+    animation: floating linear infinite 7s;
+}
+
+@keyframes floating {
+    0%{
+        transform: translateY(0) translateX(10px);
+    }
+    25%{
+        transform: translateY(30px);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    75%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateY(0) translateX(10px);
+    }
+}
+
+#playgroundDesc{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#playgroundDescTittle{
+    color: $secondaryColor;
+    width: 100%;
+    font-family: "Bebas Neue", cursive;
+    font-size: 150px;
+    border-bottom: 2px solid $mainColor;
+    margin-left: 30px;
+}
+
+#playgroundDescText{
+    color: $secondaryColor;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    text-align: justify;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#playgroundArt{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95%;
+    margin: auto;
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    min-width: 800px;
+    max-height: 650px;
+    min-height: 650px;
+}
+
+#moon{
+    width: 300px;
+    position: absolute;
+    top: 0px;
+    right: 30px;
+    animation: slideUpDown linear infinite 7s;
+}
+
+@keyframes slideUpDown {
+    0%{
+        transform: translateY(0px);
+    }
+    20%{
+        transform:rotateZ(10deg) ;
+    }
+    80%{
+        transform:  rotateZ(-15deg) ;
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+#astronaut{
+    width: 250px;
+}
+
+.star{
+    width: 60px;
+    position: absolute;
+}
+
+#star1{
+    top: 20%;
+    left: 20%;
+    animation: star1 linear infinite 3s;
+}
+
+#star2{
+    bottom: 40%;
+    right: 20%;
+    animation: star2 linear infinite 6s;
+}
+
+#star3{
+    bottom: 20%;
+    left: 30%;
+    animation: star2 linear infinite 9s;
+}
+
+@keyframes star1{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2) translateY(-10px);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes star2{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5) translateY(10px);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@media(max-width: 1064px){
+    #playgroundHeaderContainer{
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        min-height: calc(600px - 80px);
+    }
+
+    #playgroundDesc{
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        height: auto;
+        width: 90%;
+        margin: 0px;
+        overflow: visible;
+        z-index: 2;
+        margin: 0px auto;
+    }
+
+    #playgroundDescTittle{
+        color: $secondaryColor;
+        width: 100%;
+        font-family: "Bebas Neue", cursive;
+        font-size: 5rem;
+        border-bottom: 2px solid $mainColor;
+        margin-left: 0px;
+        text-align: center;
+    }
+    
+    #playgroundDescText{
+        color: $secondaryColor;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        text-align: justify;
+        margin-left: 0px;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    #playgroundArt{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        min-width: 300px;
+        max-width: 1064px;
+        max-height: 250px;
+        min-height: auto;
+        margin: 0px;
+        margin-top: 20px;
+        margin: auto;
+    }
+
+    #moon{
+        width: 150px;
+        right: 5%;
+        top: 0%;
+    }
+
+    #astronaut{
+        width: 150px;
+    }
+
+    .star{
+        width: 50px;
+    }
+
+    #star1{
+        top: 20%;
+        left: 10%;
+        animation: star1 linear infinite 3s;
+    }
+    
+    #star2{
+        bottom: 20%;
+        right: 10%;
+        animation: star2 linear infinite 6s;
+    }
+    
+    #star3{
+        bottom: 0%;
+        left: 30%;
+        animation: star2 linear infinite 6s;
+    }
+
+}
+
+@media(max-width: 349px){
+    #playgroundDescTittle{
+        font-size: 4rem;
+    }
+    
+    #playgroundDescText{
+        font-size: .8rem;
+    }
+}
