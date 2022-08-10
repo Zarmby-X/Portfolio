@@ -12,7 +12,7 @@ function Headers() {
                 <div id="leftSideHeader">
                     <Fade bottom>
                         <div>
-                            <p id="tittleIdPage1">{"Font-end Developer"}</p>
+                            <p id="tittleIdPage1">{"Front-end Developer"}</p>
                             <h1 id="tittleIdPage2">{"Armando Hernandez Rivera"}</h1>
                             <div id="Tittle-Line"></div>
                         </div>
